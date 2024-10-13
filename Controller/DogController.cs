@@ -14,11 +14,11 @@ namespace CRUDZero.Controller
         {
             _dogService = new DogService();
         }
-        public void Format(string nome, int peso, Porte porte, bool srd, bool doente)
+        public void Format(string nome, int peso, Porte porte, Opcao srd, Opcao doente)
         {
-            if (DogService.Valid(nome, peso, porte, srd, doente))
+            if (_dogService.Valid(nome, peso, porte, srd, doente))
             {
-                Add(nome, peso, porte, srd, doente);
+                this.Add(nome, peso, porte, srd, doente);
             }
             else
             {
@@ -26,13 +26,21 @@ namespace CRUDZero.Controller
             }
             
         }
-        public void Add(string nome, int peso, Porte porte, bool srd, bool doente)
+        public void Add(string nome, int peso, Porte porte, Opcao srd, Opcao doente)
         {
             _dogService.Add(nome, peso, porte, srd, doente);
         }
         public void Delete(Dog dog, int id)
         {
             _dogService.Delete(dog, id);
+        }
+        public void Update(Dog dog, int id)
+        {
+            _dogService.Update(dog, id);
+        }
+        public List<Dog> List(Dog dog)
+        {
+            return _dogService.List(dog);
         }
     }
 }

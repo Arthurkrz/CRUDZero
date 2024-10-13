@@ -1,4 +1,7 @@
 ﻿using System;
+using CRUDZero.Domain.Entities;
+using CRUDZero.Domain.Enum;
+using CRUDZero.Controller;
 
 namespace CRUDZero
 {

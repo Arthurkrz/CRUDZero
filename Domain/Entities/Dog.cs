@@ -11,7 +11,7 @@ namespace CRUDZero.Domain.Entities
         public string Nome { get; set; }
         public int Peso { get; set; }
         public Porte Porte { get; set; }
-        public bool SRD { get; set; }
-        public bool Doente { get; set; }
+        public Opcao SRD { get; set; }
+        public Opcao Doente { get; set; }
     }
 }
